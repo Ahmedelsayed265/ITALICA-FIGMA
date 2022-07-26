@@ -43,3 +43,16 @@ for (let i = 0; i < navIndicator.length; i++) {
   });
 }
 startLooping();
+let searchBtn = document.getElementById("search");
+let links = document.querySelectorAll(".navigation ul li");
+let ul = document.querySelector(".navigation ul");
+let searchField = document.querySelector(".search_field");
+searchBtn.addEventListener("click", () => {
+  for (let i = 0; i < links.length; i++) {
+    links[i].classList.add("hide");
+  }
+  searchField.classList.add("show");
+setTimeout(() => {
+  ul.classList.add("hide_ul");
+}, 600);
+});
