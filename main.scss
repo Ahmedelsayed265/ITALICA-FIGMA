@@ -1,0 +1,783 @@
+@import "./sass/mixins";
+::-webkit-scrollbar {
+  width: 5px;
+}
+::-webkit-scrollbar-track {
+  background-color: $white_color;
+  border-radius: 20px;
+}
+::-webkit-scrollbar-thumb {
+  background-color: $main_color;
+  box-shadow: rgba(60, 64, 67, 0.3) 0 1px 2px 0,
+    rgba(60, 64, 67, 0.15) 0 2px 6px 2px;
+}
+nav {
+  width: 100%;
+  @include centerFlex();
+  flex-direction: column;
+  .logo {
+    width: 90%;
+    padding: 12px 0 22px;
+    @include centerFlex();
+    flex-direction: column;
+    h1 {
+      font-family: "Bodoni Moda", sans-serif;
+      font-size: 40px;
+      color: $main_color;
+      letter-spacing: 18px;
+      margin-bottom: 8px;
+    }
+    p {
+      color: $black_color;
+      font-size: 18px;
+      letter-spacing: 12px;
+    }
+  }
+  .line {
+    width: 90%;
+    height: 1px;
+    background-color: $gray_color;
+    display: inline-block;
+  }
+  .navigation {
+    width: 90%;
+    padding: 24px 0 24px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    ul {
+      display: flex;
+      gap: 70px;
+      li {
+        font-size: 16px;
+        text-transform: uppercase;
+        color: $main_color;
+        position: relative;
+        cursor: pointer;
+        .fa-caret-down {
+          position: absolute;
+          left: calc(100% + 6px);
+          bottom: 2px;
+        }
+        .fa-search {
+          position: absolute;
+          bottom: 2px;
+        }
+      }
+    }
+  }
+  .slider_container {
+    width: 90%;
+    height: 669px;
+    position: relative;
+    .controls {
+      position: absolute;
+      bottom: 20px;
+      width: 100%;
+      gap: 15px;
+      @include centerFlex();
+      button {
+        width: 10px;
+        height: 10px;
+        border: none;
+        outline: none;
+        border-radius: 50%;
+        cursor: pointer;
+        background-color: #ffffff66;
+        &.current_slide {
+          background-color: $white_color;
+        }
+      }
+    }
+    .slide {
+      position: absolute;
+      top: 0;
+      left: 0;
+      opacity: 0;
+      transition: 1s ease-in-out;
+      height: 100%;
+      width: 100%;
+      background-size: 100% 100%;
+      background-repeat: no-repeat;
+      &.active {
+        opacity: 1;
+      }
+      .contnet {
+        position: absolute;
+        top: 320px;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        width: 80%;
+        height: 300px;
+        @include centerFlex();
+        flex-direction: column;
+        h2 {
+          font-family: "Bodoni Moda", sans-serif;
+          color: $white_color;
+          text-transform: uppercase;
+          font-size: 32px;
+          letter-spacing: 14px;
+          margin-bottom: 30px;
+          text-shadow: 0 2px 0 #9b9b9b;
+        }
+        p {
+          font-family: "Bodoni Moda", sans-serif;
+          color: $white_color;
+          text-transform: uppercase;
+          font-size: 19px;
+          margin-top: 5px;
+          text-shadow: 0 2px 0 #9b9b9b;
+        }
+        .btn {
+          width: 200px;
+          height: 50px;
+          margin-top: 50px;
+          border: 1px solid $white_color;
+          @include centerFlex();
+          color: $white_color;
+          font-size: 20px;
+          letter-spacing: 2px;
+          text-transform: uppercase;
+          cursor: pointer;
+        }
+      }
+    }
+    .slide-1 {
+      background-image: url("images/Slide-1.jpg");
+    }
+    .slide-2 {
+      background-image: url("images/Slide-2.png");
+    }
+    .slide-3 {
+      background-image: url("images/Slide-3.png");
+    }
+  }
+}
+.about {
+  padding: 50px 0 50px;
+  @include centerFlex();
+  flex-direction: column;
+  width: 100%;
+  .head {
+    width: 90%;
+    height: 64px;
+    @include centerFlex();
+    h2 {
+      font-size: 38px;
+      font-family: "Bodoni Moda", sans-serif;
+      color: $main_color;
+    }
+  }
+  .article {
+    margin-top: 30px;
+    width: 90%;
+    @include centerFlex();
+    p {
+      font-size: 24px;
+      line-height: 1.3;
+      text-align: center;
+    }
+  }
+}
+.Gallery {
+  padding: 50px 0 50px;
+  @include centerFlex();
+  flex-direction: column;
+  width: 100%;
+  .head {
+    padding: 0 20px;
+    width: 90%;
+    height: 64px;
+    @include space-between();
+    h2 {
+      font-size: 32px;
+      font-family: "Bodoni Moda", sans-serif;
+      color: $main_color;
+    }
+    .view_all {
+      position: relative;
+      a {
+        color: $main_color;
+        font-size: 18px;
+      }
+      span {
+        display: inline-block;
+        width: 70px;
+        height: 1px;
+        background-color: $main_color;
+        margin-left: -6px;
+      }
+    }
+  }
+  .sub_gallery {
+    padding: 50px 20px 0;
+    width: 90%;
+    height: 550px;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-gap: 36px;
+    .col-1 {
+      width: 100%;
+      height: 100%;
+      background-size: cover;
+      background-image: url("images/col-1.png");
+    }
+    .col-2 {
+      width: 100%;
+      display: flex;
+      flex-direction: column;
+      .title {
+        height: 35%;
+        width: 100%;
+        border-right: 1px solid #687d80;
+        h3 {
+          font-family: "Bodoni Moda", sans-serif;
+          color: $main_color;
+          font-size: 28px;
+          margin-bottom: 12px;
+          font-style: italic;
+        }
+        p {
+          color: $main_color;
+          font-size: 24px;
+          line-height: 1.4;
+        }
+      }
+      .img {
+        width: 100%;
+        height: 65%;
+        background-image: url("images/col-2.png");
+        background-size: cover;
+      }
+    }
+    .col-3 {
+      width: 100%;
+      display: flex;
+      flex-direction: column;
+      .prochure {
+        width: 100%;
+        height: 85%;
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);
+        grid-gap: 20px;
+        overflow: hidden;
+        img {
+          height: 185px;
+          width: 100%;
+          object-fit: cover;
+        }
+      }
+      .downlod_pro {
+        width: 100%;
+        height: 15%;
+        display: flex;
+        align-items: flex-end;
+        justify-content: end;
+        .download_btn {
+          width: 100%;
+          height: 50px;
+          border: 1px solid #697d80;
+          @include centerFlex();
+          color: $main_color;
+          font-size: 20px;
+          letter-spacing: 2px;
+          cursor: pointer;
+        }
+      }
+    }
+  }
+}
+.Featured_Projects {
+  padding: 50px 0 50px;
+  @include centerFlex();
+  flex-direction: column;
+  width: 100%;
+  .head {
+    padding: 0 20px;
+    width: 90%;
+    height: 64px;
+    @include space-between();
+    h2 {
+      font-size: 32px;
+      font-family: "Bodoni Moda", sans-serif;
+      color: $main_color;
+    }
+    .view_all {
+      position: relative;
+      a {
+        color: $main_color;
+        font-size: 18px;
+      }
+      span {
+        display: inline-block;
+        width: 70px;
+        height: 1px;
+        background-color: $main_color;
+        margin-left: -6px;
+      }
+    }
+  }
+  .projects {
+    padding: 50px 20px 0;
+    width: 90%;
+    display: flex;
+    flex-direction: column;
+    gap: 50px;
+    .project-1 {
+      height: 530px;
+      width: 100%;
+      display: flex;
+      justify-content: end;
+      position: relative;
+      img {
+        max-width: 77%;
+        max-height: 100%;
+        object-fit: cover;
+      }
+      .card {
+        width: 400px;
+        height: 370px;
+        background-color: $smoke_color;
+        position: absolute;
+        left: 0;
+        bottom: 40px;
+        display: flex;
+        .material_photo {
+          display: flex;
+          width: 64px;
+          height: 100%;
+          img {
+            width: 100%;
+            height: 45%;
+            object-fit: cover;
+          }
+        }
+        .desc-view {
+          width: 100%;
+          display: flex;
+          flex-direction: column;
+          .desc {
+            height: 80%;
+            .head {
+              width: 100%;
+              @include centerFlex();
+              flex-direction: column;
+              height: 120px;
+              p {
+                color: #687d80;
+                font-size: 18px;
+                margin-left: auto;
+                margin-right: 10px;
+              }
+              h3 {
+                font-family: "Bodoni Moda", sans-serif;
+                font-style: italic;
+                color: $main_color;
+                font-size: 22px;
+                line-height: 45.75px;
+              }
+            }
+            .over_view {
+              width: 100%;
+              @include centerFlex();
+              padding: 0 25px;
+              p {
+                font-size: 22px;
+                color: #687d80;
+                line-height: 1.45;
+              }
+            }
+          }
+          .veiw {
+            height: 20%;
+            width: 100%;
+            display: flex;
+            justify-content: end;
+            padding-right: 20px;
+            .view_btn {
+              width: 180px;
+              height: 45px;
+              border: 1px solid #697d80;
+              @include centerFlex();
+              color: $main_color;
+              font-size: 16px;
+              letter-spacing: 2px;
+              cursor: pointer;
+            }
+          }
+        }
+      }
+    }
+    .project-2 {
+      height: 530px;
+      width: 100%;
+      margin-bottom: 100px;
+      display: flex;
+      justify-content: start;
+      position: relative;
+      img {
+        width: 80%;
+        height: 100%;
+        object-fit: cover;
+      }
+      .card {
+        width: 400px;
+        height: 370px;
+        background-color: $smoke_color;
+        position: absolute;
+        right: 0;
+        bottom: 40px;
+        display: flex;
+        .material_photo {
+          display: flex;
+          width: 64px;
+          height: 100%;
+          img {
+            width: 100%;
+            height: 45%;
+            object-fit: cover;
+          }
+        }
+        .desc-view {
+          width: 100%;
+          display: flex;
+          flex-direction: column;
+          .desc {
+            height: 80%;
+            .head {
+              width: 100%;
+              @include centerFlex();
+              flex-direction: column;
+              height: 150px;
+              p {
+                color: #687d80;
+                font-size: 18px;
+                margin-right: auto;
+                margin-left: 5px;
+                line-height: 1.5;
+              }
+              h3 {
+                font-family: "Bodoni Moda", sans-serif;
+                font-style: italic;
+                color: $main_color;
+                font-size: 24px;
+                line-height: 1.6;
+              }
+            }
+            .over_view {
+              width: 100%;
+              @include centerFlex();
+              padding: 0 25px;
+              p {
+                font-size: 22px;
+                color: #687d80;
+                line-height: 1.4;
+              }
+            }
+          }
+          .veiw {
+            height: 20%;
+            width: 100%;
+            display: flex;
+            justify-content: end;
+            padding-right: 20px;
+            .view_btn {
+              width: 180px;
+              height: 45px;
+              border: 1px solid #697d80;
+              @include centerFlex();
+              color: $main_color;
+              font-size: 16px;
+              letter-spacing: 2px;
+              cursor: pointer;
+            }
+          }
+        }
+      }
+    }
+    .project-3 {
+      height: 700px;
+      width: 100%;
+      display: flex;
+      justify-content: end;
+      position: relative;
+      img {
+        width: 67%;
+        height: 65%;
+        object-fit: cover;
+        margin-top: auto;
+        z-index: 9999;
+      }
+      .card {
+        z-index: 99999;
+        width: 400px;
+        height: 370px;
+        background-color: $smoke_color;
+        position: absolute;
+        left: 80px;
+        bottom: 20px;
+        display: flex;
+        .material_photo {
+          display: flex;
+          width: 64px;
+          height: 100%;
+          img {
+            width: 100%;
+            height: 45%;
+            margin: 0 0 auto;
+            object-fit: cover;
+          }
+        }
+        .desc-view {
+          width: 100%;
+          display: flex;
+          flex-direction: column;
+          .desc {
+            height: 80%;
+            .head {
+              width: 100%;
+              @include centerFlex();
+              flex-direction: column;
+              height: 150px;
+              p {
+                line-height: 1.3;
+                color: #687d80;
+                font-size: 18px;
+                margin-left: auto;
+                margin-right: 10px;
+              }
+              h3 {
+                font-family: "Bodoni Moda", sans-serif;
+                font-style: italic;
+                color: $main_color;
+                font-size: 22px;
+                line-height: 45.75px;
+              }
+            }
+            .over_view {
+              width: 100%;
+              @include centerFlex();
+              padding: 0 25px;
+              p {
+                font-size: 22px;
+                color: #687d80;
+                line-height: 1.45;
+              }
+            }
+          }
+          .veiw {
+            height: 20%;
+            width: 100%;
+            display: flex;
+            justify-content: end;
+            padding-right: 20px;
+            .view_btn {
+              width: 180px;
+              height: 45px;
+              border: 1px solid #697d80;
+              @include centerFlex();
+              color: $main_color;
+              font-size: 16px;
+              letter-spacing: 2px;
+              cursor: pointer;
+            }
+          }
+        }
+      }
+      .top_right {
+        position: absolute;
+        top: 0;
+        right: 0;
+        width: 47%;
+        height: 340px;
+        background-image: url("images/top_right.png");
+        background-size: cover;
+        @include centerFlex();
+        .square {
+          width: 80%;
+          height: 255px;
+          border: 28px solid #d8d8d8;
+          @include centerFlex();
+          h2 {
+            font-weight: 600;
+            color: $white_color;
+            font-size: 40px;
+            font-style: italic;
+            font-family: "Bodoni Moda", sans-serif;
+            text-shadow: 0 2px 10px rgba(69, 82, 92, 0.5);
+          }
+        }
+      }
+      .top_left {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 47%;
+        height: 330px;
+        background-image: url("images/top_left.png");
+        background-size: cover;
+        @include centerFlex();
+        h2 {
+          font-weight: 600;
+          color: $white_color;
+          font-size: 40px;
+          font-style: italic;
+          font-family: "Bodoni Moda", sans-serif;
+          text-shadow: 0 2px 10px rgba(69, 82, 92, 0.5);
+        }
+      }
+      .bottom_left {
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        width: 48%;
+        height: 320px;
+        background-image: url("images/bottom_left.png");
+        background-size: cover;
+      }
+    }
+  }
+}
+.estimate {
+  @include centerFlex();
+  width: 100%;
+  .inner_estimate {
+    @include space-between();
+    width: 90%;
+    padding: 0 20px;
+    height: 180px;
+    p {
+      font-size: 20px;
+      letter-spacing: 2px;
+      line-height: 1.5;
+      color: $main_color;
+    }
+    .btn {
+      width: 200px;
+      height: 50px;
+      color: $white_color;
+      background-color: #697d80;
+      font-size: 20px;
+      @include centerFlex();
+    }
+  }
+}
+.testmonial {
+  width: 100%;
+  padding: 50px 0 50px;
+  @include centerFlex();
+  flex-direction: column;
+  .main_holder {
+    width: 90%;
+    display: flex;
+    flex-direction: column;
+    .head {
+      position: relative;
+      h3 {
+        font-size: 34px;
+        font-family: "Bodoni Moda", sans-serif;
+        color: $main_color;
+        text-align: center;
+      }
+      span {
+        display: block;
+        width: 48px;
+        height: 1px;
+        background-color: $main_color;
+        position: absolute;
+        right: 20px;
+        top: 50%;
+        &::after {
+          content: "";
+          width: 14px;
+          height: 1px;
+          background-color: $main_color;
+          position: absolute;
+          right: -3px;
+          top: -5px;
+          transform: rotate(45deg);
+        }
+        &::before {
+          content: "";
+          width: 14px;
+          height: 1px;
+          background-color: $main_color;
+          position: absolute;
+          right: -3px;
+          top: 5px;
+          transform: rotate(-45deg);
+        }
+      }
+    }
+    .cards {
+      @include centerFlex();
+      gap: 50px;
+      padding: 40px 20px 0;
+      .card {
+        width: calc(100% / 2.8);
+        height: 420px;
+        background-color: $smoke_color;
+        position: relative;
+        .index {
+          width: 42px;
+          height: 74px;
+          position: relative;
+          img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+          }
+          p {
+            position: absolute;
+            bottom: 6px;
+            left: 10px;
+            color: $white_color;
+            font-size: 22px;
+          }
+        }
+        .content {
+          width: 83%;
+          height: 100%;
+          position: absolute;
+          top: 0;
+          right: 0;
+          display: flex;
+          flex-direction: column;
+          p {
+            font-family: "Bodoni Moda", sans-serif;
+            font-style: italic;
+            font-weight: 600;
+            font-size: 20px;
+            color: $main_color;
+            line-height: 1.4;
+            margin-top: 40px;
+            padding-right: 10px;
+          }
+          .sender {
+            margin-bottom: 20px;
+            margin-top: auto;
+            h3 {
+              font-family: "Bodoni Moda", sans-serif;
+              font-size: 22px;
+              margin-bottom: 10px;
+              color: $main_color;
+              span {
+                width: 28px;
+                height: 1px;
+                background-color: $main_color;
+                display: inline-block;
+                margin:0 4px 6px 0;
+              }
+            }
+            b {
+              color: $main_color;
+              font-size: 18px;
+              margin-left: 32px;
+              font-weight: 400;
+            }
+          }
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,1308 @@
+@import url("https://fonts.googleapis.com/css2?family=Bodoni+Moda:ital,opsz@0,6..96;1,6..96&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=League+Spartan&display=swap");
+* {
+  padding: 0;
+  margin: 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  font-family: "League Spartan", sans-serif;
+  -webkit-tap-highlight-color: transparent;
+}
+
+a {
+  text-decoration: none;
+}
+
+ul {
+  padding: 0;
+  margin: 0;
+}
+
+li {
+  list-style: none;
+}
+
+::-webkit-scrollbar {
+  width: 5px;
+}
+
+::-webkit-scrollbar-track {
+  background-color: #ffffff;
+  border-radius: 20px;
+}
+
+::-webkit-scrollbar-thumb {
+  background-color: #44525b;
+  -webkit-box-shadow: rgba(60, 64, 67, 0.3) 0 1px 2px 0, rgba(60, 64, 67, 0.15) 0 2px 6px 2px;
+          box-shadow: rgba(60, 64, 67, 0.3) 0 1px 2px 0, rgba(60, 64, 67, 0.15) 0 2px 6px 2px;
+}
+
+nav {
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+nav .logo {
+  width: 90%;
+  padding: 12px 0 22px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+nav .logo h1 {
+  font-family: "Bodoni Moda", sans-serif;
+  font-size: 40px;
+  color: #44525b;
+  letter-spacing: 18px;
+  margin-bottom: 8px;
+}
+
+nav .logo p {
+  color: #000000;
+  font-size: 18px;
+  letter-spacing: 12px;
+}
+
+nav .line {
+  width: 90%;
+  height: 1px;
+  background-color: #979797;
+  display: inline-block;
+}
+
+nav .navigation {
+  width: 90%;
+  padding: 24px 0 24px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+nav .navigation ul {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  gap: 70px;
+}
+
+nav .navigation ul li {
+  font-size: 16px;
+  text-transform: uppercase;
+  color: #44525b;
+  position: relative;
+  cursor: pointer;
+}
+
+nav .navigation ul li .fa-caret-down {
+  position: absolute;
+  left: calc(100% + 6px);
+  bottom: 2px;
+}
+
+nav .navigation ul li .fa-search {
+  position: absolute;
+  bottom: 2px;
+}
+
+nav .slider_container {
+  width: 90%;
+  height: 669px;
+  position: relative;
+}
+
+nav .slider_container .controls {
+  position: absolute;
+  bottom: 20px;
+  width: 100%;
+  gap: 15px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+nav .slider_container .controls button {
+  width: 10px;
+  height: 10px;
+  border: none;
+  outline: none;
+  border-radius: 50%;
+  cursor: pointer;
+  background-color: #ffffff66;
+}
+
+nav .slider_container .controls button.current_slide {
+  background-color: #ffffff;
+}
+
+nav .slider_container .slide {
+  position: absolute;
+  top: 0;
+  left: 0;
+  opacity: 0;
+  -webkit-transition: 1s ease-in-out;
+  transition: 1s ease-in-out;
+  height: 100%;
+  width: 100%;
+  background-size: 100% 100%;
+  background-repeat: no-repeat;
+}
+
+nav .slider_container .slide.active {
+  opacity: 1;
+}
+
+nav .slider_container .slide .contnet {
+  position: absolute;
+  top: 320px;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+  width: 80%;
+  height: 300px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+nav .slider_container .slide .contnet h2 {
+  font-family: "Bodoni Moda", sans-serif;
+  color: #ffffff;
+  text-transform: uppercase;
+  font-size: 32px;
+  letter-spacing: 14px;
+  margin-bottom: 30px;
+  text-shadow: 0 2px 0 #9b9b9b;
+}
+
+nav .slider_container .slide .contnet p {
+  font-family: "Bodoni Moda", sans-serif;
+  color: #ffffff;
+  text-transform: uppercase;
+  font-size: 19px;
+  margin-top: 5px;
+  text-shadow: 0 2px 0 #9b9b9b;
+}
+
+nav .slider_container .slide .contnet .btn {
+  width: 200px;
+  height: 50px;
+  margin-top: 50px;
+  border: 1px solid #ffffff;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  color: #ffffff;
+  font-size: 20px;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  cursor: pointer;
+}
+
+nav .slider_container .slide-1 {
+  background-image: url("images/Slide-1.jpg");
+}
+
+nav .slider_container .slide-2 {
+  background-image: url("images/Slide-2.png");
+}
+
+nav .slider_container .slide-3 {
+  background-image: url("images/Slide-3.png");
+}
+
+.about {
+  padding: 50px 0 50px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  width: 100%;
+}
+
+.about .head {
+  width: 90%;
+  height: 64px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.about .head h2 {
+  font-size: 38px;
+  font-family: "Bodoni Moda", sans-serif;
+  color: #44525b;
+}
+
+.about .article {
+  margin-top: 30px;
+  width: 90%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.about .article p {
+  font-size: 24px;
+  line-height: 1.3;
+  text-align: center;
+}
+
+.Gallery {
+  padding: 50px 0 50px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  width: 100%;
+}
+
+.Gallery .head {
+  padding: 0 20px;
+  width: 90%;
+  height: 64px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+.Gallery .head h2 {
+  font-size: 32px;
+  font-family: "Bodoni Moda", sans-serif;
+  color: #44525b;
+}
+
+.Gallery .head .view_all {
+  position: relative;
+}
+
+.Gallery .head .view_all a {
+  color: #44525b;
+  font-size: 18px;
+}
+
+.Gallery .head .view_all span {
+  display: inline-block;
+  width: 70px;
+  height: 1px;
+  background-color: #44525b;
+  margin-left: -6px;
+}
+
+.Gallery .sub_gallery {
+  padding: 50px 20px 0;
+  width: 90%;
+  height: 550px;
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: (1fr)[3];
+      grid-template-columns: repeat(3, 1fr);
+  grid-gap: 36px;
+}
+
+.Gallery .sub_gallery .col-1 {
+  width: 100%;
+  height: 100%;
+  background-size: cover;
+  background-image: url("images/col-1.png");
+}
+
+.Gallery .sub_gallery .col-2 {
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+.Gallery .sub_gallery .col-2 .title {
+  height: 35%;
+  width: 100%;
+  border-right: 1px solid #687d80;
+}
+
+.Gallery .sub_gallery .col-2 .title h3 {
+  font-family: "Bodoni Moda", sans-serif;
+  color: #44525b;
+  font-size: 28px;
+  margin-bottom: 12px;
+  font-style: italic;
+}
+
+.Gallery .sub_gallery .col-2 .title p {
+  color: #44525b;
+  font-size: 24px;
+  line-height: 1.4;
+}
+
+.Gallery .sub_gallery .col-2 .img {
+  width: 100%;
+  height: 65%;
+  background-image: url("images/col-2.png");
+  background-size: cover;
+}
+
+.Gallery .sub_gallery .col-3 {
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+.Gallery .sub_gallery .col-3 .prochure {
+  width: 100%;
+  height: 85%;
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: (1fr)[4];
+      grid-template-columns: repeat(4, 1fr);
+  grid-gap: 20px;
+  overflow: hidden;
+}
+
+.Gallery .sub_gallery .col-3 .prochure img {
+  height: 185px;
+  width: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+
+.Gallery .sub_gallery .col-3 .downlod_pro {
+  width: 100%;
+  height: 15%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: end;
+      -ms-flex-align: end;
+          align-items: flex-end;
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: end;
+}
+
+.Gallery .sub_gallery .col-3 .downlod_pro .download_btn {
+  width: 100%;
+  height: 50px;
+  border: 1px solid #697d80;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  color: #44525b;
+  font-size: 20px;
+  letter-spacing: 2px;
+  cursor: pointer;
+}
+
+.Featured_Projects {
+  padding: 50px 0 50px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  width: 100%;
+}
+
+.Featured_Projects .head {
+  padding: 0 20px;
+  width: 90%;
+  height: 64px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+.Featured_Projects .head h2 {
+  font-size: 32px;
+  font-family: "Bodoni Moda", sans-serif;
+  color: #44525b;
+}
+
+.Featured_Projects .head .view_all {
+  position: relative;
+}
+
+.Featured_Projects .head .view_all a {
+  color: #44525b;
+  font-size: 18px;
+}
+
+.Featured_Projects .head .view_all span {
+  display: inline-block;
+  width: 70px;
+  height: 1px;
+  background-color: #44525b;
+  margin-left: -6px;
+}
+
+.Featured_Projects .projects {
+  padding: 50px 20px 0;
+  width: 90%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  gap: 50px;
+}
+
+.Featured_Projects .projects .project-1 {
+  height: 530px;
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: end;
+  position: relative;
+}
+
+.Featured_Projects .projects .project-1 img {
+  max-width: 77%;
+  max-height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+
+.Featured_Projects .projects .project-1 .card {
+  width: 400px;
+  height: 370px;
+  background-color: #F9F9F9;
+  position: absolute;
+  left: 0;
+  bottom: 40px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.Featured_Projects .projects .project-1 .card .material_photo {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  width: 64px;
+  height: 100%;
+}
+
+.Featured_Projects .projects .project-1 .card .material_photo img {
+  width: 100%;
+  height: 45%;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+
+.Featured_Projects .projects .project-1 .card .desc-view {
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+.Featured_Projects .projects .project-1 .card .desc-view .desc {
+  height: 80%;
+}
+
+.Featured_Projects .projects .project-1 .card .desc-view .desc .head {
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  height: 120px;
+}
+
+.Featured_Projects .projects .project-1 .card .desc-view .desc .head p {
+  color: #687d80;
+  font-size: 18px;
+  margin-left: auto;
+  margin-right: 10px;
+}
+
+.Featured_Projects .projects .project-1 .card .desc-view .desc .head h3 {
+  font-family: "Bodoni Moda", sans-serif;
+  font-style: italic;
+  color: #44525b;
+  font-size: 22px;
+  line-height: 45.75px;
+}
+
+.Featured_Projects .projects .project-1 .card .desc-view .desc .over_view {
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  padding: 0 25px;
+}
+
+.Featured_Projects .projects .project-1 .card .desc-view .desc .over_view p {
+  font-size: 22px;
+  color: #687d80;
+  line-height: 1.45;
+}
+
+.Featured_Projects .projects .project-1 .card .desc-view .veiw {
+  height: 20%;
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: end;
+  padding-right: 20px;
+}
+
+.Featured_Projects .projects .project-1 .card .desc-view .veiw .view_btn {
+  width: 180px;
+  height: 45px;
+  border: 1px solid #697d80;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  color: #44525b;
+  font-size: 16px;
+  letter-spacing: 2px;
+  cursor: pointer;
+}
+
+.Featured_Projects .projects .project-2 {
+  height: 530px;
+  width: 100%;
+  margin-bottom: 100px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: start;
+  position: relative;
+}
+
+.Featured_Projects .projects .project-2 img {
+  width: 80%;
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+
+.Featured_Projects .projects .project-2 .card {
+  width: 400px;
+  height: 370px;
+  background-color: #F9F9F9;
+  position: absolute;
+  right: 0;
+  bottom: 40px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.Featured_Projects .projects .project-2 .card .material_photo {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  width: 64px;
+  height: 100%;
+}
+
+.Featured_Projects .projects .project-2 .card .material_photo img {
+  width: 100%;
+  height: 45%;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+
+.Featured_Projects .projects .project-2 .card .desc-view {
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+.Featured_Projects .projects .project-2 .card .desc-view .desc {
+  height: 80%;
+}
+
+.Featured_Projects .projects .project-2 .card .desc-view .desc .head {
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  height: 150px;
+}
+
+.Featured_Projects .projects .project-2 .card .desc-view .desc .head p {
+  color: #687d80;
+  font-size: 18px;
+  margin-right: auto;
+  margin-left: 5px;
+  line-height: 1.5;
+}
+
+.Featured_Projects .projects .project-2 .card .desc-view .desc .head h3 {
+  font-family: "Bodoni Moda", sans-serif;
+  font-style: italic;
+  color: #44525b;
+  font-size: 24px;
+  line-height: 1.6;
+}
+
+.Featured_Projects .projects .project-2 .card .desc-view .desc .over_view {
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  padding: 0 25px;
+}
+
+.Featured_Projects .projects .project-2 .card .desc-view .desc .over_view p {
+  font-size: 22px;
+  color: #687d80;
+  line-height: 1.4;
+}
+
+.Featured_Projects .projects .project-2 .card .desc-view .veiw {
+  height: 20%;
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: end;
+  padding-right: 20px;
+}
+
+.Featured_Projects .projects .project-2 .card .desc-view .veiw .view_btn {
+  width: 180px;
+  height: 45px;
+  border: 1px solid #697d80;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  color: #44525b;
+  font-size: 16px;
+  letter-spacing: 2px;
+  cursor: pointer;
+}
+
+.Featured_Projects .projects .project-3 {
+  height: 700px;
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: end;
+  position: relative;
+}
+
+.Featured_Projects .projects .project-3 img {
+  width: 67%;
+  height: 65%;
+  -o-object-fit: cover;
+     object-fit: cover;
+  margin-top: auto;
+  z-index: 9999;
+}
+
+.Featured_Projects .projects .project-3 .card {
+  z-index: 99999;
+  width: 400px;
+  height: 370px;
+  background-color: #F9F9F9;
+  position: absolute;
+  left: 80px;
+  bottom: 20px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.Featured_Projects .projects .project-3 .card .material_photo {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  width: 64px;
+  height: 100%;
+}
+
+.Featured_Projects .projects .project-3 .card .material_photo img {
+  width: 100%;
+  height: 45%;
+  margin: 0 0 auto;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+
+.Featured_Projects .projects .project-3 .card .desc-view {
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+.Featured_Projects .projects .project-3 .card .desc-view .desc {
+  height: 80%;
+}
+
+.Featured_Projects .projects .project-3 .card .desc-view .desc .head {
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  height: 150px;
+}
+
+.Featured_Projects .projects .project-3 .card .desc-view .desc .head p {
+  line-height: 1.3;
+  color: #687d80;
+  font-size: 18px;
+  margin-left: auto;
+  margin-right: 10px;
+}
+
+.Featured_Projects .projects .project-3 .card .desc-view .desc .head h3 {
+  font-family: "Bodoni Moda", sans-serif;
+  font-style: italic;
+  color: #44525b;
+  font-size: 22px;
+  line-height: 45.75px;
+}
+
+.Featured_Projects .projects .project-3 .card .desc-view .desc .over_view {
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  padding: 0 25px;
+}
+
+.Featured_Projects .projects .project-3 .card .desc-view .desc .over_view p {
+  font-size: 22px;
+  color: #687d80;
+  line-height: 1.45;
+}
+
+.Featured_Projects .projects .project-3 .card .desc-view .veiw {
+  height: 20%;
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: end;
+  padding-right: 20px;
+}
+
+.Featured_Projects .projects .project-3 .card .desc-view .veiw .view_btn {
+  width: 180px;
+  height: 45px;
+  border: 1px solid #697d80;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  color: #44525b;
+  font-size: 16px;
+  letter-spacing: 2px;
+  cursor: pointer;
+}
+
+.Featured_Projects .projects .project-3 .top_right {
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 47%;
+  height: 340px;
+  background-image: url("images/top_right.png");
+  background-size: cover;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.Featured_Projects .projects .project-3 .top_right .square {
+  width: 80%;
+  height: 255px;
+  border: 28px solid #d8d8d8;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.Featured_Projects .projects .project-3 .top_right .square h2 {
+  font-weight: 600;
+  color: #ffffff;
+  font-size: 40px;
+  font-style: italic;
+  font-family: "Bodoni Moda", sans-serif;
+  text-shadow: 0 2px 10px rgba(69, 82, 92, 0.5);
+}
+
+.Featured_Projects .projects .project-3 .top_left {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 47%;
+  height: 330px;
+  background-image: url("images/top_left.png");
+  background-size: cover;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.Featured_Projects .projects .project-3 .top_left h2 {
+  font-weight: 600;
+  color: #ffffff;
+  font-size: 40px;
+  font-style: italic;
+  font-family: "Bodoni Moda", sans-serif;
+  text-shadow: 0 2px 10px rgba(69, 82, 92, 0.5);
+}
+
+.Featured_Projects .projects .project-3 .bottom_left {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 48%;
+  height: 320px;
+  background-image: url("images/bottom_left.png");
+  background-size: cover;
+}
+
+.estimate {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  width: 100%;
+}
+
+.estimate .inner_estimate {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  width: 90%;
+  padding: 0 20px;
+  height: 180px;
+}
+
+.estimate .inner_estimate p {
+  font-size: 20px;
+  letter-spacing: 2px;
+  line-height: 1.5;
+  color: #44525b;
+}
+
+.estimate .inner_estimate .btn {
+  width: 200px;
+  height: 50px;
+  color: #ffffff;
+  background-color: #697d80;
+  font-size: 20px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.testmonial {
+  width: 100%;
+  padding: 50px 0 50px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+.testmonial .main_holder {
+  width: 90%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+.testmonial .main_holder .head {
+  position: relative;
+}
+
+.testmonial .main_holder .head h3 {
+  font-size: 34px;
+  font-family: "Bodoni Moda", sans-serif;
+  color: #44525b;
+  text-align: center;
+}
+
+.testmonial .main_holder .head span {
+  display: block;
+  width: 48px;
+  height: 1px;
+  background-color: #44525b;
+  position: absolute;
+  right: 20px;
+  top: 50%;
+}
+
+.testmonial .main_holder .head span::after {
+  content: "";
+  width: 14px;
+  height: 1px;
+  background-color: #44525b;
+  position: absolute;
+  right: -3px;
+  top: -5px;
+  -webkit-transform: rotate(45deg);
+          transform: rotate(45deg);
+}
+
+.testmonial .main_holder .head span::before {
+  content: "";
+  width: 14px;
+  height: 1px;
+  background-color: #44525b;
+  position: absolute;
+  right: -3px;
+  top: 5px;
+  -webkit-transform: rotate(-45deg);
+          transform: rotate(-45deg);
+}
+
+.testmonial .main_holder .cards {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  gap: 50px;
+  padding: 40px 20px 0;
+}
+
+.testmonial .main_holder .cards .card {
+  width: calc(100% / 2.8);
+  height: 420px;
+  background-color: #F9F9F9;
+  position: relative;
+}
+
+.testmonial .main_holder .cards .card .index {
+  width: 42px;
+  height: 74px;
+  position: relative;
+}
+
+.testmonial .main_holder .cards .card .index img {
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+
+.testmonial .main_holder .cards .card .index p {
+  position: absolute;
+  bottom: 6px;
+  left: 10px;
+  color: #ffffff;
+  font-size: 22px;
+}
+
+.testmonial .main_holder .cards .card .content {
+  width: 83%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  right: 0;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+.testmonial .main_holder .cards .card .content p {
+  font-family: "Bodoni Moda", sans-serif;
+  font-style: italic;
+  font-weight: 600;
+  font-size: 20px;
+  color: #44525b;
+  line-height: 1.4;
+  margin-top: 40px;
+  padding-right: 10px;
+}
+
+.testmonial .main_holder .cards .card .content .sender {
+  margin-bottom: 20px;
+  margin-top: auto;
+}
+
+.testmonial .main_holder .cards .card .content .sender h3 {
+  font-family: "Bodoni Moda", sans-serif;
+  font-size: 22px;
+  margin-bottom: 10px;
+  color: #44525b;
+}
+
+.testmonial .main_holder .cards .card .content .sender h3 span {
+  width: 28px;
+  height: 1px;
+  background-color: #44525b;
+  display: inline-block;
+  margin: 0 4px 6px 0;
+}
+
+.testmonial .main_holder .cards .card .content .sender b {
+  color: #44525b;
+  font-size: 18px;
+  margin-left: 32px;
+  font-weight: 400;
+}
+/*# sourceMappingURL=main.css.map */
