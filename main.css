@@ -584,7 +584,7 @@ nav .slider_container .slide-3 {
 .Featured_Projects .projects .project-1 .card {
   width: 400px;
   height: 370px;
-  background-color: #F9F9F9;
+  background-color: #f9f9f9;
   position: absolute;
   left: 0;
   bottom: 40px;
@@ -730,7 +730,7 @@ nav .slider_container .slide-3 {
 .Featured_Projects .projects .project-2 .card {
   width: 400px;
   height: 370px;
-  background-color: #F9F9F9;
+  background-color: #f9f9f9;
   position: absolute;
   right: 0;
   bottom: 40px;
@@ -879,7 +879,7 @@ nav .slider_container .slide-3 {
   z-index: 99999;
   width: 400px;
   height: 370px;
-  background-color: #F9F9F9;
+  background-color: #f9f9f9;
   position: absolute;
   left: 80px;
   bottom: 20px;
@@ -1021,6 +1021,8 @@ nav .slider_container .slide-3 {
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
+  -webkit-box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 12px;
+          box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 12px;
 }
 
 .Featured_Projects .projects .project-3 .top_right .square {
@@ -1064,6 +1066,8 @@ nav .slider_container .slide-3 {
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
+  -webkit-box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 12px;
+          box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 12px;
 }
 
 .Featured_Projects .projects .project-3 .top_left h2 {
@@ -1083,6 +1087,8 @@ nav .slider_container .slide-3 {
   height: 320px;
   background-image: url("images/bottom_left.png");
   background-size: cover;
+  -webkit-box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 12px;
+          box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 12px;
 }
 
 .estimate {
@@ -1135,6 +1141,8 @@ nav .slider_container .slide-3 {
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
+  -webkit-box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 12px;
+          box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 12px;
 }
 
 .testmonial {
@@ -1179,7 +1187,7 @@ nav .slider_container .slide-3 {
 
 .testmonial .main_holder .head span {
   display: block;
-  width: 48px;
+  width: 38px;
   height: 1px;
   background-color: #44525b;
   position: absolute;
@@ -1189,24 +1197,24 @@ nav .slider_container .slide-3 {
 
 .testmonial .main_holder .head span::after {
   content: "";
-  width: 14px;
+  width: 10px;
   height: 1px;
   background-color: #44525b;
   position: absolute;
-  right: -3px;
-  top: -5px;
+  right: -1px;
+  top: -4px;
   -webkit-transform: rotate(45deg);
           transform: rotate(45deg);
 }
 
 .testmonial .main_holder .head span::before {
   content: "";
-  width: 14px;
+  width: 10px;
   height: 1px;
   background-color: #44525b;
   position: absolute;
-  right: -3px;
-  top: 5px;
+  right: -1px;
+  top: 4px;
   -webkit-transform: rotate(-45deg);
           transform: rotate(-45deg);
 }
@@ -1228,7 +1236,9 @@ nav .slider_container .slide-3 {
 .testmonial .main_holder .cards .card {
   width: calc(100% / 2.8);
   height: 420px;
-  background-color: #F9F9F9;
+  background-color: #f9f9f9;
+  -webkit-box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 12px;
+          box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 12px;
   position: relative;
 }
 
@@ -1304,5 +1314,119 @@ nav .slider_container .slide-3 {
   font-size: 18px;
   margin-left: 32px;
   font-weight: 400;
+}
+
+.blog {
+  background-color: #f9f9f9;
+  padding: 50px 0 50px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  width: 100%;
+}
+
+.blog .head {
+  padding: 0 20px;
+  width: 90%;
+  height: 64px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+.blog .head h2 {
+  font-size: 32px;
+  font-family: "Bodoni Moda", sans-serif;
+  color: #44525b;
+}
+
+.blog .head .view_all {
+  position: relative;
+}
+
+.blog .head .view_all a {
+  color: #44525b;
+  font-size: 18px;
+}
+
+.blog .head .view_all span {
+  display: inline-block;
+  width: 70px;
+  height: 1px;
+  background-color: #44525b;
+  margin-left: -6px;
+}
+
+.blog .blog_cards {
+  padding: 50px 20px 0;
+  width: 90%;
+  height: 440px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  gap: 40px;
+}
+
+.blog .blog_cards .card {
+  width: calc(100% / 4.2);
+  height: 100%;
+  background-color: #ffffff;
+  -webkit-box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 12px;
+          box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 12px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+.blog .blog_cards .card .blog_img {
+  width: 100%;
+  height: 70%;
+}
+
+.blog .blog_cards .card .blog_img img {
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+
+.blog .blog_cards .card .blog_title {
+  width: 100%;
+  height: 30%;
+  padding-left: 15px;
+}
+
+.blog .blog_cards .card .blog_title h3 {
+  font-size: 24px;
+  font-family: "Bodoni Moda", sans-serif;
+  color: #44525b;
+  margin-top: 15px;
+  line-height: 1.19;
+}
+
+.blog .blog_cards .card .blog_title p {
+  margin-top: 15px;
+  font-size: 15px;
+  color: #44525b;
 }
 /*# sourceMappingURL=main.css.map */

@@ -593,6 +593,7 @@ nav {
         background-image: url("images/top_right.png");
         background-size: cover;
         @include centerFlex();
+        box-shadow: $main_shad;
         .square {
           width: 80%;
           height: 255px;
@@ -617,6 +618,7 @@ nav {
         background-image: url("images/top_left.png");
         background-size: cover;
         @include centerFlex();
+        box-shadow: $main_shad;
         h2 {
           font-weight: 600;
           color: $white_color;
@@ -634,6 +636,7 @@ nav {
         height: 320px;
         background-image: url("images/bottom_left.png");
         background-size: cover;
+        box-shadow: $main_shad;
       }
     }
   }
@@ -659,6 +662,7 @@ nav {
       background-color: #697d80;
       font-size: 20px;
       @include centerFlex();
+      box-shadow: $main_shad;
     }
   }
 }
@@ -681,7 +685,7 @@ nav {
       }
       span {
         display: block;
-        width: 48px;
+        width: 38px;
         height: 1px;
         background-color: $main_color;
         position: absolute;
@@ -689,22 +693,22 @@ nav {
         top: 50%;
         &::after {
           content: "";
-          width: 14px;
+          width: 10px;
           height: 1px;
           background-color: $main_color;
           position: absolute;
-          right: -3px;
-          top: -5px;
+          right: -1px;
+          top: -4px;
           transform: rotate(45deg);
         }
         &::before {
           content: "";
-          width: 14px;
+          width: 10px;
           height: 1px;
           background-color: $main_color;
           position: absolute;
-          right: -3px;
-          top: 5px;
+          right: -1px;
+          top: 4px;
           transform: rotate(-45deg);
         }
       }
@@ -717,6 +721,7 @@ nav {
         width: calc(100% / 2.8);
         height: 420px;
         background-color: $smoke_color;
+        box-shadow: $main_shad;
         position: relative;
         .index {
           width: 42px;
@@ -766,7 +771,7 @@ nav {
                 height: 1px;
                 background-color: $main_color;
                 display: inline-block;
-                margin:0 4px 6px 0;
+                margin: 0 4px 6px 0;
               }
             }
             b {
@@ -776,6 +781,79 @@ nav {
               font-weight: 400;
             }
           }
+        }
+      }
+    }
+  }
+}
+.blog {
+  background-color: $smoke_color;
+  padding: 50px 0 50px;
+  @include centerFlex();
+  flex-direction: column;
+  width: 100%;
+  .head {
+    padding: 0 20px;
+    width: 90%;
+    height: 64px;
+    @include space-between();
+    h2 {
+      font-size: 32px;
+      font-family: "Bodoni Moda", sans-serif;
+      color: $main_color;
+    }
+    .view_all {
+      position: relative;
+      a {
+        color: $main_color;
+        font-size: 18px;
+      }
+      span {
+        display: inline-block;
+        width: 70px;
+        height: 1px;
+        background-color: $main_color;
+        margin-left: -6px;
+      }
+    }
+  }
+  .blog_cards {
+    padding: 50px 20px 0;
+    width: 90%;
+    height: 440px;
+    display: flex;
+    gap: 40px;
+    .card {
+      width: calc(100% / 4.2);
+      height: 100%;
+      background-color: $white_color;
+      box-shadow: $main_shad;
+      display: flex;
+      flex-direction: column;
+      .blog_img {
+        width: 100%;
+        height: 70%;
+        img {
+          width: 100%;
+          height: 100%;
+          object-fit: cover;
+        }
+      }
+      .blog_title {
+        width: 100%;
+        height: 30%;
+        padding-left: 15px;
+        h3 {
+          font-size: 24px;
+          font-family: "Bodoni Moda", sans-serif;
+          color: $main_color;
+          margin-top: 15px;
+          line-height: 1.19;
+        }
+        p {
+          margin-top: 15px;
+          font-size: 15px;
+          color: $main_color;
         }
       }
     }
