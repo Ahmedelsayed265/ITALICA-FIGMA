@@ -1490,11 +1490,13 @@ nav .slider_container .slide-3 {
   letter-spacing: 1px;
 }
 
-.contact_us .contact_container .form {
+.contact_us .contact_container .form,
+.contact_us .contact_container textarea {
   width: 48%;
 }
 
-.contact_us .contact_container .form form {
+.contact_us .contact_container .form form,
+.contact_us .contact_container textarea form {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -1505,7 +1507,8 @@ nav .slider_container .slide-3 {
   gap: 22px;
 }
 
-.contact_us .contact_container .form form input {
+.contact_us .contact_container .form form input,
+.contact_us .contact_container textarea form input {
   width: 100%;
   height: 66px;
   font-size: 20px;
@@ -1517,35 +1520,36 @@ nav .slider_container .slide-3 {
   padding: 24px;
 }
 
-.contact_us .contact_container .form form input::-webkit-input-placeholder {
+.contact_us .contact_container .form form input::-webkit-input-placeholder,
+.contact_us .contact_container textarea form input::-webkit-input-placeholder {
   font-size: 20px;
   color: #687d80;
   line-height: 24px;
 }
 
-.contact_us .contact_container .form form input:-ms-input-placeholder {
+.contact_us .contact_container .form form input:-ms-input-placeholder,
+.contact_us .contact_container textarea form input:-ms-input-placeholder {
   font-size: 20px;
   color: #687d80;
   line-height: 24px;
 }
 
-.contact_us .contact_container .form form input::-ms-input-placeholder {
+.contact_us .contact_container .form form input::-ms-input-placeholder,
+.contact_us .contact_container textarea form input::-ms-input-placeholder {
   font-size: 20px;
   color: #687d80;
   line-height: 24px;
 }
 
-.contact_us .contact_container .form form input::placeholder {
+.contact_us .contact_container .form form input::placeholder,
+.contact_us .contact_container textarea form input::placeholder {
   font-size: 20px;
   color: #687d80;
   line-height: 24px;
 }
 
-.contact_us .contact_container .form form input:nth-child(3) {
-  height: 120px;
-}
-
-.contact_us .contact_container .form form button {
+.contact_us .contact_container .form form button,
+.contact_us .contact_container textarea form button {
   border: none;
   background: none;
   outline: none;
@@ -1569,6 +1573,18 @@ nav .slider_container .slide-3 {
       align-self: flex-end;
   cursor: pointer;
   letter-spacing: 2.6px;
+}
+
+.contact_us .contact_container textarea {
+  width: 100%;
+  height: 120px;
+  padding: 0;
+  padding-left: 24px;
+  padding-top: 24px;
+  font-size: 20px;
+  color: #687d80;
+  line-height: 24px;
+  outline: none;
 }
 
 .footer {
