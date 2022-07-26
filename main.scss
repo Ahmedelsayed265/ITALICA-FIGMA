@@ -8,6 +8,7 @@
 }
 ::-webkit-scrollbar-thumb {
   background-color: $main_color;
+  height: 100px;
   box-shadow: rgba(60, 64, 67, 0.3) 0 1px 2px 0,
     rgba(60, 64, 67, 0.15) 0 2px 6px 2px;
 }
@@ -41,14 +42,32 @@ nav {
   }
   .navigation {
     width: 90%;
+    height: 78px;
     padding: 24px 0 24px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
+    @include centerFlex();
+    overflow: hidden;
+    position: relative;
     ul {
-      display: flex;
+      @include centerFlex();
+      width: 100%;
       gap: 70px;
+      &.hide_ul {
+        width: 0;
+      }
       li {
+        @for $i from 2 to 7 {
+          $x: 0.5;
+          &:nth-child(#{$i}).hide {
+            transform: scale(0);
+            transition: 0.5s ease-in-out;
+            transition-delay: #{$x-=0.1}s;
+          }
+        }
+        &:nth-child(1).hide {
+          transform: scale(0);
+          transition: 0.5s ease-in-out;
+          transition-delay: 0.6s;
+        }
         font-size: 16px;
         text-transform: uppercase;
         color: $main_color;
@@ -59,10 +78,36 @@ nav {
           left: calc(100% + 6px);
           bottom: 2px;
         }
-        .fa-search {
-          position: absolute;
-          bottom: 2px;
+      }
+    }
+    .search_field {
+      &.show {
+        left: 0%;
+        transition: 1s ease-in-out;
+        transition-delay: 0.7s;
+      }
+      width: 100%;
+      height: 30px;
+      @include centerFlex();
+      gap: 20px;
+      position: absolute;
+      left: 100%;
+      input {
+        height: 100%;
+        width: 35%;
+        font-size: 17px;
+        color: $main_color;
+        padding-top: 16px;
+        @include clearInput();
+        &::placeholder {
+          font-size: 18px;
+          color: $main_color;
         }
+      }
+      i {
+        margin: auto 0 0;
+        font-size: 18px;
+        color: $main_color;
       }
     }
   }
