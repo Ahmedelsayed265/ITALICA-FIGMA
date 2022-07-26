@@ -1386,9 +1386,6 @@ nav .slider_container .slide-3 {
 .blog .blog_cards .card {
   width: calc(100% / 4.2);
   height: 100%;
-  background-color: #ffffff;
-  -webkit-box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 12px;
-          box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 12px;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -1413,7 +1410,6 @@ nav .slider_container .slide-3 {
 .blog .blog_cards .card .blog_title {
   width: 100%;
   height: 30%;
-  padding-left: 15px;
 }
 
 .blog .blog_cards .card .blog_title h3 {
@@ -1428,5 +1424,172 @@ nav .slider_container .slide-3 {
   margin-top: 15px;
   font-size: 15px;
   color: #44525b;
+}
+
+.contact_us {
+  background-color: #f9f9f9;
+  padding: 100px 0;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  width: 100%;
+}
+
+.contact_us .contact_container {
+  width: 90%;
+  padding: 0 20px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  gap: 4%;
+}
+
+.contact_us .contact_container .text {
+  width: 48%;
+}
+
+.contact_us .contact_container .text .head {
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.contact_us .contact_container .text .head img {
+  width: 50px;
+  height: 100px;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+
+.contact_us .contact_container .text .head h3 {
+  font-size: 32px;
+  font-family: "Bodoni Moda", sans-serif;
+  color: #44525b;
+  margin-left: 36px;
+}
+
+.contact_us .contact_container .text .inner_text {
+  width: 100%;
+  margin-top: 23px;
+}
+
+.contact_us .contact_container .text .inner_text p {
+  font-size: 20px;
+  line-height: 1.61;
+  letter-spacing: 1px;
+}
+
+.contact_us .contact_container .form {
+  width: 48%;
+}
+
+.contact_us .contact_container .form form {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  gap: 22px;
+}
+
+.contact_us .contact_container .form form input {
+  width: 100%;
+  height: 66px;
+  font-size: 20px;
+  color: #687d80;
+  border: none;
+  background: none;
+  outline: none;
+  border: 1px solid #697d80;
+  padding: 24px;
+}
+
+.contact_us .contact_container .form form input::-webkit-input-placeholder {
+  font-size: 20px;
+  color: #687d80;
+  line-height: 24px;
+}
+
+.contact_us .contact_container .form form input:-ms-input-placeholder {
+  font-size: 20px;
+  color: #687d80;
+  line-height: 24px;
+}
+
+.contact_us .contact_container .form form input::-ms-input-placeholder {
+  font-size: 20px;
+  color: #687d80;
+  line-height: 24px;
+}
+
+.contact_us .contact_container .form form input::placeholder {
+  font-size: 20px;
+  color: #687d80;
+  line-height: 24px;
+}
+
+.contact_us .contact_container .form form input:nth-child(3) {
+  height: 120px;
+}
+
+.contact_us .contact_container .form form button {
+  border: none;
+  background: none;
+  outline: none;
+  width: 166px;
+  height: 50px;
+  color: #ffffff;
+  background-color: #697d80;
+  font-size: 20px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 12px;
+          box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 12px;
+  -ms-flex-item-align: end;
+      align-self: flex-end;
+  cursor: pointer;
+  letter-spacing: 2.6px;
+}
+
+.footer {
+  width: 100%;
+  background-color: #44525b;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  color: #ffffff;
+  height: 60px;
+  font-size: 20px;
+  letter-spacing: 1px;
+}
+
+.footer i {
+  margin: 0 5px;
 }
 /*# sourceMappingURL=main.css.map */
