@@ -44,15 +44,25 @@ for (let i = 0; i < navIndicator.length; i++) {
 }
 startLooping();
 let searchBtn = document.getElementById("search");
+let closeBtn = document.getElementById("close");
 let links = document.querySelectorAll(".navigation ul li");
 let ul = document.querySelector(".navigation ul");
 let searchField = document.querySelector(".search_field");
 searchBtn.addEventListener("click", () => {
   for (let i = 0; i < links.length; i++) {
+    links[i].classList.remove("show");
     links[i].classList.add("hide");
   }
   searchField.classList.add("show");
-setTimeout(() => {
-  ul.classList.add("hide_ul");
-}, 600);
+  setTimeout(() => {
+    ul.classList.add("hide_ul");
+  }, 600);
+});
+closeBtn.addEventListener("click", () => {
+  for (let i = 0; i < links.length; i++) {
+    links[i].classList.remove("hide");
+    links[i].classList.add("show");
+  }
+  searchField.classList.remove("show");
+  ul.classList.remove("hide_ul");
 });
