@@ -61,6 +61,13 @@ nav .logo {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+}
+
+nav .logo .col {
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
@@ -73,7 +80,7 @@ nav .logo {
           flex-direction: column;
 }
 
-nav .logo h1 {
+nav .logo .col h1 {
   font-family: "Bodoni Moda", sans-serif;
   font-size: 40px;
   color: #44525b;
@@ -81,10 +88,17 @@ nav .logo h1 {
   margin-bottom: 8px;
 }
 
-nav .logo p {
+nav .logo .col p {
   color: #000000;
   font-size: 18px;
   letter-spacing: 12px;
+}
+
+nav .logo .menu {
+  display: none;
+  font-size: 26px;
+  cursor: pointer;
+  color: #44525b;
 }
 
 nav .line {
@@ -1807,5 +1821,186 @@ nav .slider_container .slide-3 {
 
 .footer i {
   margin: 0 5px;
+}
+
+@media (max-width: 450px) {
+  nav .logo .col {
+    width: 90%;
+    -webkit-box-align: start;
+        -ms-flex-align: start;
+            align-items: flex-start;
+  }
+  nav .logo .col h1 {
+    font-size: 26px;
+    letter-spacing: 16px;
+  }
+  nav .logo .col p {
+    font-size: 16px;
+    letter-spacing: 5px;
+  }
+  nav .logo .menu {
+    width: 10%;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -webkit-box-pack: end;
+        -ms-flex-pack: end;
+            justify-content: end;
+    padding-right: 2px;
+  }
+  nav .line {
+    display: none;
+  }
+  nav .navigation {
+    display: none;
+  }
+  nav .slider_container {
+    height: 500px;
+  }
+  nav .slider_container .slide .contnet {
+    top: 235px;
+    height: 470px;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
+  nav .slider_container .slide .contnet h2 {
+    font-size: 20px;
+    margin-bottom: 10px;
+    letter-spacing: 10px;
+    height: 100px;
+    text-align: center;
+  }
+  nav .slider_container .slide .contnet p {
+    font-size: 14px;
+  }
+  nav .slider_container .slide .contnet .btn {
+    margin-top: 20px;
+  }
+  .about .head h1 {
+    font-size: 34px;
+  }
+  .about .article p {
+    text-align: justify;
+    font-size: 20px;
+    line-height: 1.5;
+    padding: 0 20px 0;
+  }
+  .Gallery .head {
+    -webkit-box-align: end;
+        -ms-flex-align: end;
+            align-items: flex-end;
+  }
+  .Gallery .head h2 {
+    font-size: 22px;
+  }
+  .Gallery .head .view_all a {
+    font-size: 16px;
+    line-height: 1.28;
+  }
+  .Gallery .head .view_all span {
+    width: 18px;
+  }
+  .Gallery .sub_gallery {
+    height: 100%;
+    -ms-grid-columns: (1fr)[1];
+        grid-template-columns: repeat(1, 1fr);
+  }
+  .Gallery .sub_gallery .col-1 {
+    height: 320px;
+  }
+  .Gallery .sub_gallery .col-2 {
+    height: 500px;
+  }
+  .Gallery .sub_gallery .col-2 .title h3 {
+    font-size: 26px;
+  }
+  .Gallery .sub_gallery .col-2 .title p {
+    font-size: 22px;
+  }
+  .estimate .inner_estimate {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    height: 300px;
+    -webkit-box-align: baseline;
+        -ms-flex-align: baseline;
+            align-items: baseline;
+  }
+  .testmonial .main_holder .head h3 {
+    font-size: 28px;
+    text-align: left;
+    padding-left: 20px;
+  }
+  .testmonial .main_holder .head span {
+    width: 30px;
+    top: 66%;
+  }
+  .testmonial .main_holder .cards {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+  .testmonial .main_holder .cards .card {
+    height: 380px;
+    width: 100%;
+  }
+  .testmonial .main_holder .cards .card .content p {
+    font-size: 18px;
+    padding-left: 15px;
+  }
+  .testmonial .main_holder .cards .card .content .sender h3 {
+    font-size: 20px;
+  }
+  .testmonial .main_holder .cards .card .content .sender b {
+    margin-left: 34px;
+  }
+  .blog .head h2 {
+    font-size: 30px;
+    margin-bottom: 6px;
+  }
+  .blog .head .view_all span {
+    width: 18px;
+  }
+  .blog .blog_cards {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    height: 100%;
+  }
+  .blog .blog_cards .card {
+    width: 100%;
+    height: 440px;
+  }
+  .contact_us .contact_container {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    gap: 40px;
+  }
+  .contact_us .contact_container .text {
+    width: 100%;
+  }
+  .contact_us .contact_container .form {
+    width: 100%;
+  }
+  .contact_us .contact_container .form form input {
+    height: 50px;
+    padding: 15px;
+  }
+  .contact_us .contact_container .form textarea {
+    padding-top: 15px;
+    padding-left: 15px;
+  }
+  .contact_us .contact_container .form form button {
+    width: 100%;
+  }
 }
 /*# sourceMappingURL=main.css.map */
