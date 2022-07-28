@@ -1824,6 +1824,9 @@ nav .slider_container .slide-3 {
 }
 
 @media (max-width: 450px) {
+  nav .logo {
+    margin-bottom: 20px;
+  }
   nav .logo .col {
     width: 90%;
     -webkit-box-align: start;
@@ -1832,7 +1835,7 @@ nav .slider_container .slide-3 {
   }
   nav .logo .col h1 {
     font-size: 28px;
-    letter-spacing: 14px;
+    letter-spacing: 13px;
   }
   nav .logo .col p {
     font-size: 16px;
@@ -1859,6 +1862,9 @@ nav .slider_container .slide-3 {
   }
   nav .slider_container {
     height: 460px;
+  }
+  nav .slider_container .slide {
+    background-size: cover;
   }
   nav .slider_container .slide .contnet {
     top: 223px;
