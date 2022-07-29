@@ -51,6 +51,21 @@ nav {
     display: inline-block;
   }
   .navigation {
+    .close{
+      width: 100%;
+      display: flex;
+      align-items: center;
+      justify-content: start;
+      display: none;
+      height: 30px;
+      position: absolute;
+      top: 30px;
+      left: 45px;
+      i{
+        font-size: 24px;
+        color: $main_color;
+      }
+    }
     width: 90%;
     height: 78px;
     padding: 24px 0 24px;
@@ -1072,6 +1087,7 @@ nav {
 }
 @media (max-width: 450px) {
   nav {
+    position: relative;
     .logo {
       margin-bottom: 20px;
       .col {
@@ -1098,7 +1114,43 @@ nav {
       display: none;
     }
     .navigation {
-      display: none;
+      position: absolute;
+      top: 0;
+      left: 100%;
+      flex-direction: column;
+      gap: 50px;
+      height: 100vh;
+      width: 100%;
+      padding: 0;
+      background: $white_color;
+      z-index: 999;
+      transition: 0.5s left ease-in-out;
+      &.open {
+        left: 0;
+      }
+      .close{
+        display: flex;
+      }
+      ul {
+        flex-direction: column;
+        height: 75%;
+        justify-content: end;
+        li:last-child {
+          display: none;
+        }
+      }
+      .search_field {
+        opacity: 1;
+        top: 14%;
+        input {
+          width: 70%;
+          border-bottom: 1px solid $main_color;
+          padding-top: 8px;
+        }
+        .fa-times {
+          display: none;
+        }
+      }
     }
     .slider_container {
       height: 460px;

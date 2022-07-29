@@ -66,3 +66,12 @@ closeBtn.addEventListener("click", () => {
   searchField.classList.remove("show");
   ul.classList.remove("hide_ul");
 });
+let openMenu = document.getElementById("openMenu"),
+  closeMenu = document.getElementById("closeMenu"),
+  navigation = document.querySelector(".navigation");
+openMenu.addEventListener("click", () => {
+  navigation.classList.add("open");
+});
+closeMenu.addEventListener("click", () => {
+  navigation.classList.remove("open");
+});

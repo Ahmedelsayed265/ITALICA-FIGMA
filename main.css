@@ -125,6 +125,29 @@ nav .navigation {
   position: relative;
 }
 
+nav .navigation .close {
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: start;
+  display: none;
+  height: 30px;
+  position: absolute;
+  top: 30px;
+  left: 45px;
+}
+
+nav .navigation .close i {
+  font-size: 24px;
+  color: #44525b;
+}
+
 nav .navigation ul {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -1824,6 +1847,9 @@ nav .slider_container .slide-3 {
 }
 
 @media (max-width: 450px) {
+  nav {
+    position: relative;
+  }
   nav .logo {
     margin-bottom: 20px;
   }
@@ -1858,6 +1884,53 @@ nav .slider_container .slide-3 {
     display: none;
   }
   nav .navigation {
+    position: absolute;
+    top: 0;
+    left: 100%;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    gap: 50px;
+    height: 100vh;
+    width: 100%;
+    padding: 0;
+    background: #ffffff;
+    z-index: 999;
+    -webkit-transition: 0.5s left ease-in-out;
+    transition: 0.5s left ease-in-out;
+  }
+  nav .navigation.open {
+    left: 0;
+  }
+  nav .navigation .close {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+  }
+  nav .navigation ul {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    height: 75%;
+    -webkit-box-pack: end;
+        -ms-flex-pack: end;
+            justify-content: end;
+  }
+  nav .navigation ul li:last-child {
+    display: none;
+  }
+  nav .navigation .search_field {
+    opacity: 1;
+    top: 14%;
+  }
+  nav .navigation .search_field input {
+    width: 70%;
+    border-bottom: 1px solid #44525b;
+    padding-top: 8px;
+  }
+  nav .navigation .search_field .fa-times {
     display: none;
   }
   nav .slider_container {
