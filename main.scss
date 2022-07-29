@@ -1133,17 +1133,18 @@ nav {
       }
       ul {
         flex-direction: column;
-        height: 75%;
+        height: 70%;
         justify-content: end;
+        gap: 50px;
         li:last-child {
           display: none;
         }
       }
       .search_field {
         opacity: 1;
-        top: 14%;
+        top: 16%;
         input {
-          width: 70%;
+          width: 65%;
           border-bottom: 1px solid $main_color;
           padding-top: 8px;
         }

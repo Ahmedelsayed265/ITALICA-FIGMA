@@ -1913,20 +1913,21 @@ nav .slider_container .slide-3 {
     -webkit-box-direction: normal;
         -ms-flex-direction: column;
             flex-direction: column;
-    height: 75%;
+    height: 70%;
     -webkit-box-pack: end;
         -ms-flex-pack: end;
             justify-content: end;
+    gap: 50px;
   }
   nav .navigation ul li:last-child {
     display: none;
   }
   nav .navigation .search_field {
     opacity: 1;
-    top: 14%;
+    top: 16%;
   }
   nav .navigation .search_field input {
-    width: 70%;
+    width: 65%;
     border-bottom: 1px solid #44525b;
     padding-top: 8px;
   }
