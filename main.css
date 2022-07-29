@@ -1913,7 +1913,7 @@ nav .slider_container .slide-3 {
     -webkit-box-direction: normal;
         -ms-flex-direction: column;
             flex-direction: column;
-    height: 70%;
+    height: 72%;
     -webkit-box-pack: end;
         -ms-flex-pack: end;
             justify-content: end;
@@ -1924,6 +1924,7 @@ nav .slider_container .slide-3 {
   }
   nav .navigation .search_field {
     opacity: 1;
+    z-index: 99999999999;
     top: 16%;
   }
   nav .navigation .search_field input {

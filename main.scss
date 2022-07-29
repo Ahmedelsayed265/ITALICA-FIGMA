@@ -1133,7 +1133,7 @@ nav {
       }
       ul {
         flex-direction: column;
-        height: 70%;
+        height: 72%;
         justify-content: end;
         gap: 50px;
         li:last-child {
@@ -1142,6 +1142,7 @@ nav {
       }
       .search_field {
         opacity: 1;
+        z-index: 99999999999;
         top: 16%;
         input {
           width: 65%;
